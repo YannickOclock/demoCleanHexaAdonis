@@ -19,6 +19,7 @@
     "#controllers/*": "./src/infrastructure/controllers/*.js",
     "#middleware/*": "./src/infrastructure/middleware/*.js",
     "#exceptions/*": "./src/infrastructure/exceptions/*.js",
+    "#providers/*": "./src/infrastructure/providers/*.js",
     "#config/*": "./config/*.js"
   },
   "devDependencies": {

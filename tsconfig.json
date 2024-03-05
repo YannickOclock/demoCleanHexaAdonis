@@ -8,6 +8,7 @@
       "#infrastructure/*": ["./src/infrastructure/*.js"],
       "#controllers/*": ["./src/infrastructure/controllers/*.js"],
       "#middleware/*": ["./src/infrastructure/middleware/*.js"],
+      "#providers/*": ["./src/infrastructure/providers/*.js"],
       "#tests/*": ["./tests/*.js"],
       "#config/*": ["./config/*.js"],
     },
