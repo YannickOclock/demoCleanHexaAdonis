@@ -10,12 +10,11 @@ export default class RegisterUserUseCase {
   async handle(payload: RegisterUserDto): Promise<boolean> {
     const user = new User()
     user.registerUser(payload)
-    const result = await this.userRepository.save({
+    return await this.userRepository.save({
       id: user.generateNewId(),
       name: user.name!,
       email: user.email!,
       password: user.password!
     })
-    return result
   }
 }

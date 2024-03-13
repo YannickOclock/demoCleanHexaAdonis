@@ -8,6 +8,6 @@
 */
 
 import router from '@adonisjs/core/services/router'
-const RegisterUserController = () => import("#controllers/register_user_controller");
+const RegisterUserController = () => import('#controllers/register_user_controller')
 
 router.get('/user/add', [RegisterUserController])

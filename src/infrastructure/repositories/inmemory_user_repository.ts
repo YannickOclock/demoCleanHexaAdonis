@@ -1,7 +1,7 @@
-import User from "#domain/models/user";
-import UserRepository from "#domain/contracts/repositories/user_repository";
+import User from '#domain/models/user'
+import UserRepository from '#domain/contracts/repositories/user_repository'
 
-let users: User[];
+let users: User[]
 
 export default class InMemoryUserRepository implements UserRepository {
 

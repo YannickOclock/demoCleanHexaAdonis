@@ -1,5 +1,5 @@
-import { inject } from "@adonisjs/core";
-import RegisterUserUseCase from "#domain/usecases/register_user_usecase";
+import { inject } from '@adonisjs/core'
+import RegisterUserUseCase from '#domain/usecases/register_user_usecase'
 
 @inject()
 export default class RegisterUserController {
