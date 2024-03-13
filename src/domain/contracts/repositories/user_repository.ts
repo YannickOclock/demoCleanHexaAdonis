@@ -1,9 +1,9 @@
 import User from '#domain/models/user'
 
 interface CreateUserDto {
-  id: string,
-  name: string,
-  email: string,
+  id: string
+  name: string
+  email: string
   password: string
 }
 

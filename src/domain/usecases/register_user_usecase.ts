@@ -1,7 +1,7 @@
-import { RegisterUserDto } from "#domain/contracts/dto/register_user_dto";
-import UserRepository from "#domain/contracts/repositories/user_repository";
-import User from "#domain/models/user";
-import { inject } from "@adonisjs/core";
+import { RegisterUserDto } from '#domain/contracts/dto/register_user_dto'
+import UserRepository from '#domain/contracts/repositories/user_repository'
+import User from '#domain/models/user'
+import { inject } from '@adonisjs/core'
 
 @inject()
 export default class RegisterUserUseCase {
@@ -14,7 +14,7 @@ export default class RegisterUserUseCase {
       id: user.generateNewId(),
       name: user.name!,
       email: user.email!,
-      password: user.password!
+      password: user.password!,
     })
   }
 }
