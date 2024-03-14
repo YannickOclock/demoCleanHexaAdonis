@@ -1,0 +1,22 @@
+{
+  "all": true,
+  "include": [
+    "src/domain/**",
+    "src/infrastructure/**",
+    "src/presentation/**"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts"
+  ],
+  "reporter": [
+    "text-summary",
+    "html"
+  ],
+  "check-coverage": true,
+  "branches": 100,
+  "functions": 100,
+  "lines": 100,
+  "statements": 100
+}

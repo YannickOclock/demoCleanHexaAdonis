@@ -1,6 +1,6 @@
 import type { ApplicationService } from '@adonisjs/core/types'
 import UserRepository from '#domain/contracts/repositories/user_repository'
-import InMemoryUserRepository from '#infrastructure/repositories/inmemory_user_repository'
+import SqliteUserRepository from '#infrastructure/repositories/sqlite_user_repository'
 
 export default class AppProvider {
   constructor(protected app: ApplicationService) {}
@@ -14,7 +14,7 @@ export default class AppProvider {
    * The container bindings have booted
    */
   async boot() {
-    this.app.container.bind(UserRepository, () => new InMemoryUserRepository())
+    this.app.container.bind(UserRepository, () => new SqliteUserRepository())
   }
 
   /**

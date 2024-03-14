@@ -47,7 +47,11 @@ export default defineConfig({
   | List of modules to import before starting the application.
   |
   */
-  preloads: [() => import('#infrastructure/adonis/routes'), () => import('#infrastructure/adonis/kernel')],
+  preloads: [
+    () => import('#infrastructure/adonis/routes'),
+    () => import('#infrastructure/adonis/kernel'),
+    () => import('#infrastructure/adonis/view'),
+  ],
 
   /*
   |--------------------------------------------------------------------------

@@ -8,3 +8,38 @@ body {
   height: 100%;
   width: 100%;
 }
+
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  background-color: lightcyan;
+  padding: 1em;
+}
+
+.navigation {
+  box-sizing: border-box;
+  display: flex;
+  width: 90%;
+  margin: 1em auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation ul li {
+  display: inline;
+  margin: 0 1em;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navigation ul li a:hover, .navigation ul li a.active {
+  color: lightcoral;
+}

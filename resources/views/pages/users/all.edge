@@ -14,6 +14,17 @@
       <li> <a href="{{ route('users') }}" class="{{ request.matchesRoute('users') ? 'active':'' }}">Les users du blog </a></li>
     </ul>
   </nav>
-  <h1> It Works! </h1>
+  <h1> Liste des users du blog </h1>
+  <div id="app">
+    <ul>
+      @each(user in await findUsers())
+        <li>
+          <article>
+            <h2> {{ user.name }} </h2>
+            <p> {{ user.email }} </p>
+          </article>
+      @end
+    </ul>
+  </div>
 </body>
 </html>

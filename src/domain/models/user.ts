@@ -6,9 +6,9 @@ export interface UserRegister {
 
 export default class User {
   id: string | undefined
-  name: string | null | undefined
-  email: string | null | undefined
-  password: string | null | undefined
+  name: string | undefined
+  email: string | undefined
+  password: string | undefined
 
   registerUser(payload: UserRegister): void {
     this.name = payload.name
