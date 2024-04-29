@@ -22,4 +22,10 @@ router
   })
   .as('users')
 
-router.get('/user/add', [RegisterUserController])
+router
+  .get('/user/add', async ({ view }) => {
+    return view.render('pages/users/add')
+  })
+  .as('users.add')
+
+router.post('/user/add', [RegisterUserController])

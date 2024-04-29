@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> AdonisJS - A fully featured web framework for Node.js </title>
+@include('partials/header')
 
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body>
-  <nav class="navigation">
-    <ul>
-      <li> <a href="{{ route('home') }}" class="{{ request.matchesRoute('home') ? 'active':'' }}">Home</a></li>
-      <li> <a href="{{ route('users') }}" class="{{ request.matchesRoute('users') ? 'active':'' }}">Les users du blog </a></li>
-    </ul>
-  </nav>
-  <h1> It Works! </h1>
-</body>
-</html>
+<h1> It Works! </h1>
+
+@include('partials/footer')

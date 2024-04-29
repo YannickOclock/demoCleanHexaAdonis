@@ -1,3 +1,5 @@
+import { randomUUID } from "node:crypto";
+
 export interface UserRegister {
   name: string
   email: string
@@ -9,6 +11,7 @@ export default class User {
   name: string | undefined
   email: string | undefined
   password: string | undefined
+  created_at: string | undefined
 
   registerUser(payload: UserRegister): void {
     this.name = payload.name
@@ -16,8 +19,12 @@ export default class User {
     this.password = payload.password
   }
 
+  getFormattedDate(): string {
+    return new Date(this.created_at as string).toLocaleDateString()
+  }
+
   generateNewId(): string {
-    this.id = Math.random().toString(36).substring(2, 9)
+    this.id = randomUUID()
     return this.id
   }
 }

@@ -19,11 +19,12 @@ export default class SqliteUserRepository implements UserRepository {
       full_name: user.name,
       email: user.email,
       password: user.password,
-      created_at: DateTime.now().toISO(),
+      created_at: DateTime.now().toString(),
       updated_at: null,
     }
     try {
-      db.table('users').insert(userDb)
+      console.log('insertion en db en cours')
+      await db.table('users').insert(userDb)
       return true
     } catch (error) {
       return false
@@ -53,6 +54,7 @@ export default class SqliteUserRepository implements UserRepository {
         user.name = userDb.full_name
         user.email = userDb.email
         user.password = userDb.password
+        user.created_at = userDb.created_at
         return user
       })
     } catch (error) {

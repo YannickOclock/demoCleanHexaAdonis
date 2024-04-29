@@ -43,3 +43,12 @@ body {
 .navigation ul li a:hover, .navigation ul li a.active {
   color: lightcoral;
 }
+
+.users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 2em auto;
+}

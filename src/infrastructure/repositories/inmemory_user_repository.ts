@@ -9,6 +9,7 @@ export default class InMemoryUserRepository implements UserRepository {
   }
 
   async save(user: CreateUserDto): Promise<boolean> {
+    console.log('insertion en db en cours (memory)')
     users.push(user)
     return true
   }

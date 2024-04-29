@@ -1,0 +1,22 @@
+@include('partials/header')
+
+<h1>Inscrire un utilisateur</h1>
+
+<form method="post">
+    <div><input type="text" name="name" placeholder="Nom d'utilisateur" value="{{ old('name') || '' }}"></div>
+    @if(flashMessages.has('inputErrorsBag.name'))
+      <p>{{ flashMessages.get('inputErrorsBag.name') }}</p>
+    @end
+    <div><input type="text" name="email" placeholder="Email" value="{{ old('email') || '' }}"></div>
+    @if(flashMessages.has('inputErrorsBag.email'))
+        <p>{{ flashMessages.get('inputErrorsBag.email') }}</p>
+      @end
+    <div><input type="password" name="password" placeholder="Mot de passe"></div>
+    @if(flashMessages.has('inputErrorsBag.password'))
+        <p>{{ flashMessages.get('inputErrorsBag.password') }}</p>
+      @end
+    <div><input type="submit" value="Inscrire">
+    {{ csrfField() }}
+</form>
+
+@include('partials/footer')
